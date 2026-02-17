@@ -1,0 +1,204 @@
+# Alacritty 配置文件 - ~/.config/alacritty/alacritty.toml
+# 主题：GitHub Light | 修复正则表达式（仅 ASCII 边界）
+
+live_config_reload = true
+
+[env]
+TERM = "alacritty"
+
+# ==================== 窗口设置 ====================
+[window]
+decorations = "Full"
+startup_mode = "Windowed"
+title = "Terminal"
+dynamic_title = true
+padding = { x = 6, y = 6 }
+dimensions = { columns = 117, lines = 33 }
+position = { x = 0, y = 0 }
+opacity = 0.95
+class = { instance = "Alacritty", general = "Alacritty" }
+
+# ==================== 字体设置 ====================
+[font]
+normal = { family = "Ubuntu Mono", style = "Regular" }
+bold = { family = "Ubuntu Mono", style = "Bold" }
+italic = { family = "Ubuntu Mono", style = "Italic" }
+size = 13.0
+builtin_box_drawing = true
+
+# ==================== 颜色主题 - GitHub Light ====================
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[colors.primary]
+background = "#ffffff"
+foreground = "#24292e"
+
+[colors.cursor]
+text = "#ffffff"
+cursor = "#0366d6"
+
+[colors.selection]
+text = "#24292e"
+background = "#c8e1ff"
+
+[colors.normal]
+black   = "#24292e"
+red     = "#d73a49"
+green   = "#28a745"
+yellow  = "#dbab09"
+blue    = "#0366d6"
+magenta = "#5a32a3"
+cyan    = "#1b7c83"
+white   = "#6a737d"
+
+[colors.bright]
+black   = "#959da5"
+red     = "#cb2431"
+green   = "#22863a"
+yellow  = "#b08800"
+blue    = "#005cc5"
+magenta = "#5a32a3"
+cyan    = "#3192a0"
+white   = "#d1d5da"
+
+[colors.dim]
+black   = "#5a5f66"
+red     = "#ac3c45"
+green   = "#1f7840"
+yellow  = "#966e1a"
+blue    = "#1a4c8c"
+magenta = "#3f256c"
+cyan    = "#185b64"
+white   = "#4f5b66"
+
+[[colors.indexed_colors]]
+index = 16
+color = "#f66a0a"
+
+[[colors.indexed_colors]]
+index = 17
+color = "#ea4a5a"
+
+# ==================== 光标、滚动、选择等（保持不变）====================
+[cursor]
+style = { shape = "Beam", blinking = "On" }
+vi_mode_style = { shape = "Block", blinking = "Off" }
+blink_interval = 750
+blink_timeout = 5
+unfocused_hollow = true
+
+[scrolling]
+history = 10000
+multiplier = 3
+[selection]
+save_to_clipboard = true
+semantic_escape_chars = ",|:\"' ()[]{}<>`"
+
+# ==================== 键盘 & 鼠标（保持不变）====================
+[[keyboard.bindings]]
+key = "C"
+mods = "Control|Shift"
+action = "Copy"
+
+[[keyboard.bindings]]
+key = "V"
+mods = "Control|Shift"
+action = "Paste"
+
+[[keyboard.bindings]]
+key = "Insert"
+mods = "Shift"
+action = "PasteSelection"
+
+[[keyboard.bindings]]
+key = "Plus"
+mods = "Control"
+action = "IncreaseFontSize"
+
+[[keyboard.bindings]]
+key = "Equals"
+mods = "Control"
+action = "IncreaseFontSize"
+
+[[keyboard.bindings]]
+key = "Minus"
+mods = "Control"
+action = "DecreaseFontSize"
+
+[[keyboard.bindings]]
+key = "0"
+mods = "Control"
+action = "ResetFontSize"
+
+[[keyboard.bindings]]
+key = "F11"
+mods = "None"
+action = "ToggleFullscreen"
+
+[[keyboard.bindings]]
+key = "N"
+mods = "Control|Shift"
+action = "SpawnNewInstance"
+
+[[keyboard.bindings]]
+key = "W"
+mods = "Control|Shift"
+action = "Quit"
+
+[[keyboard.bindings]]
+key = "Space"
+mods = "Control|Shift"
+action = "ToggleViMode"
+
+[[keyboard.bindings]]
+key = "F"
+mods = "Control|Shift"
+action = "SearchForward"
+
+[[keyboard.bindings]]
+key = "B"
+mods = "Control|Shift"
+action = "SearchBackward"
+
+[[keyboard.bindings]]
+key = "L"
+mods = "Control"
+action = "ClearLogNotice"
+
+[mouse]
+hide_when_typing = true
+
+[[mouse.bindings]]
+mouse = "Right"
+action = "Paste"
+
+[[mouse.bindings]]
+mouse = "Middle"
+action = "PasteSelection"
+
+[[mouse.bindings]]
+mouse = "Right"
+mods = "Control"
+action = "ExpandSelection"
+
+# ==================== 无错 Hints - 仅匹配 URL ====================
+[hints]
+alphabet = "jfkdlsahgurieowpqnvmcxzbty"
+
+[[hints.enabled]]
+regex = "https?://[a-zA-Z0-9.-]+(?:/[a-zA-Z0-9._~:/?#@!$&'()*+,;=%-]*)?"
+action = "Copy"
+mouse = { enabled = true }
+post_processing = true
+persist = false
+
+# ==================== 终端设置 ====================
+[terminal]
+osc52 = "CopyPaste"
+
+# ==================== 调试 ====================
+[debug]
+log_level = "Warn"
+persistent_logging = false
+render_timer = false

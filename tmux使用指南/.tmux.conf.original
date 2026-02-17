@@ -1,0 +1,94 @@
+##### 基础设置 ######
+# 前缀键（Ctrl+a，更顺手）
+set -g prefix C-a
+unbind C-b
+bind C-a send-prefix
+
+# 终端与颜色
+set -g default-terminal "tmux-256color"
+set -as terminal-features ',xterm-256color:RGB'
+
+# 响应更快
+set -sg escape-time 0
+
+# 鼠标支持（选中 / 滚动）
+set -g mouse on
+
+# 中文 & 剪贴板（非常重要）
+set -g set-clipboard on
+
+##### 分屏快捷键 #####
+bind | split-window -h
+bind - split-window -v
+unbind '"'
+unbind %
+
+# pane 切换（vim 风格）
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R
+
+# pane 大小调整（Alt + hjkl）
+bind -n M-h resize-pane -L 5
+bind -n M-j resize-pane -D 5
+bind -n M-k resize-pane -U 5
+bind -n M-l resize-pane -R 5
+
+##### 窗口管理 #####
+bind c new-window
+bind x kill-pane
+bind X kill-window
+
+##### 状态栏样式 #####
+set -g status on
+set -g status-interval 2
+set -g status-position top
+set -g status-style "bg=#1e1e2e,fg=#cdd6f4"
+set -g pane-border-style "fg=#45475a"
+set -g pane-active-border-style "fg=#a6e3a1"
+set -g message-style "bg=#1e1e2e,fg=#a6e3a1"
+set -g message-command-style "bg=#1e1e2e,fg=#f9e2af"
+
+##### Window 列表 #####
+set -g window-status-format " #[fg=#7f849c]#I:#W "
+set -g window-status-current-format " #[bold,fg=#a6e3a1]#I:#W* "
+
+##### 左侧：Session #####
+set -g status-left-length 40
+set -g status-left " #[bold,fg=#89b4fa]#S "
+
+##### 状态栏右侧（稳定版） #####
+set -g status-right-length 150
+set -g status-right "\
+#[fg=#fab387]│ CPU #{cpu_percentage} \
+#[fg=#fab387]│ MEM #(awk '/MemTotal/ {t=$2} /MemAvailable/ {a=$2} END {printf \"%.0fG/%.0fG\", (t-a)/1024/1024, t/1024/1024}' /proc/meminfo) \
+#[fg=#fab387]│ / #(df -h / | awk 'NR==2 {print $3\"/\"$2}') \
+#[fg=#fab387]│ HOME #(df -h /home | awk 'NR==2 {print $3\"/\"$2}') \
+#[fg=#fab387]│ #[fg=#89b4fa]%Y-%m-%d %H:%M \
+"
+
+##### 插件（TPM）#####
+set -g @plugin 'tmux-plugins/tpm'
+
+# CPU 显示
+set -g @plugin 'tmux-plugins/tmux-cpu'
+
+# 会话保存 / 恢复
+set -g @plugin 'tmux-plugins/tmux-resurrect'
+set -g @plugin 'tmux-plugins/tmux-continuum'
+
+# 自动保存（每 5 分钟）
+set -g @continuum-restore 'on'
+set -g @continuum-save-interval '5'
+
+#cpu状态
+set -g @cpu_percentage_format "%3.0f%%"
+set -g @ram_percentage_format "%3.0f%%"
+
+# resurrect 行为
+set -g @resurrect-capture-pane-contents 'on'
+set -g @resurrect-strategy-nvim 'session'
+
+##### 启动 TPM #####
+run '~/.tmux/plugins/tpm/tpm'

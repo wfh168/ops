@@ -216,9 +216,10 @@ sudo mkdir -p /etc/docker
 sudo tee /etc/docker/daemon.json <<-'EOF'
 {
   "registry-mirrors": [
-    "https://mirror.ccs.tencentyun.com",
-    "https://registry.docker-cn.com",
-    "http://hub-mirror.c.163.com"
+    "https://docker.1ms.run",
+    "https://docker-0.unsee.tech",
+    "https://docker.m.daocloud.io",
+    "https://xuanyuan.cloud"
   ],
   "log-driver": "json-file",
   "log-opts": {
