@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "linux初级/用户管理/02_用户管理命令.md",
+                "file": "tmux使用指南/常用命令.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "02_用户管理命令"
+              "title": "常用命令"
             }
           }
         ]
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "linux初级/用户管理/02_用户管理命令.md",
+                "file": "tmux使用指南/常用命令.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "02_用户管理命令 的大纲"
+              "title": "常用命令 的大纲"
             }
           }
         ],
@@ -185,6 +185,13 @@
   },
   "active": "74b5d71f34306c0a",
   "lastOpenFiles": [
+    "tmux使用指南/测试智能状态栏.md",
+    "tmux使用指南/本地SSH信息显示说明.md",
+    "git/06_Git实战应用.md",
+    "Git-GitHub连接问题解决方案.md",
+    "git/02_Git分支管理.md",
+    "git/05_Git工作流.md",
+    "linux初级/用户管理/02_用户管理命令.md",
     "linux初级/用户管理/01_用户和组概念.md",
     "linux中级/ssh/01_SSH基础与原理.md",
     "SSH-vim粘贴问题解决方案.md",
@@ -194,9 +201,7 @@
     "linux中级/ssh/02_SSH高级应用.md",
     "kvm学习指南/04_虚拟机管理.md",
     "kvm学习指南/02_环境检查和安装.md",
-    "git/06_Git实战应用.md",
     "git/01_Git基础入门.md",
-    "git/02_Git分支管理.md",
     "git/03_Git远程协作.md",
     "kvm学习指南/06_存储管理.md",
     "kvm学习指南/10_实战案例.md",
@@ -204,18 +209,13 @@
     "kvm学习指南/完成总结.md",
     "kvm学习指南/09_性能优化.md",
     "kvm学习指南/08_virt-manager图形界面.md",
-    "tmux使用指南/测试智能状态栏.md",
-    "tmux使用指南/本地SSH信息显示说明.md",
     "🎉项目完成.md",
     "🎉Docker学习完成总结.md",
     "day002-老男孩Linux操作系统安装步骤.assets/image-20240229172031437.png",
     "day002-老男孩Linux操作系统安装步骤.assets/image-20240229172013775.png",
     "linux中级/zabbix/01_Zabbix基础与架构.md",
     "2026-02-10.md",
-    "kvm学习指南/快速开始.md",
     "未命名.base",
-    "kvm学习指南/01_KVM基础入门.md",
-    "tmux使用指南/更新日志.md",
     "tmux使用指南/scripts/smart-status.sh",
     "tmux使用指南/scripts/ssh-info-local.sh",
     "tmux使用指南/scripts/ssh-info-compact.sh",
