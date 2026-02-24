@@ -164,7 +164,69 @@ git branch recovered-branch commit_hash
 git checkout commit_hash
 git checkout -b recovered-branch
 ```
+# 一字不差拉取远程 main 分支
 
+要将本地代码**完全同步**为远程 main 分支的状态（丢弃所有本地修改和提交），请按以下步骤操作：
+
+## 📌 完整命令
+
+```bash
+# 1. 切换到 main 分支
+git checkout main
+
+# 2. 获取远程最新代码
+git fetch origin
+
+# 3. 硬重置本地 main 到远程 main（丢弃所有本地修改）
+git reset --hard origin/main
+
+# 4. 清理未跟踪的文件和目录（可选，如果需要彻底干净）
+git clean -fd
+```
+
+## 🔍 命令说明
+
+| 命令 | 作用 |
+|------|------|
+| `git fetch origin` | 获取远程仓库最新信息，不合并 |
+| `git reset --hard origin/main` | 强制本地与远程完全一致，**丢弃所有本地修改** |
+| `git clean -fd` | 删除未跟踪的文件和目录（-f强制，-d包括目录） |
+
+## ⚠️ 重要警告
+
+> **此操作会永久丢失以下内容：**
+> - 所有未提交的本地修改
+> - 所有本地新增的提交
+> - 所有未跟踪的文件（如果执行了 `git clean -fd`）
+
+## 💡 建议先备份
+
+在执行前，建议先创建备份分支：
+
+```bash
+# 创建备份分支（以防万一）
+git branch backup-before-reset
+
+# 或者查看有哪些本地修改
+git status
+git diff
+```
+
+## 🔙 如果误操作了可以恢复
+
+如果后悔了，可以用 reflog 找回之前的状态：
+
+```bash
+# 查看操作历史
+git reflog
+
+# 重置到之前的某个状态
+git reset --hard HEAD@{n}
+```
+
+---
+
+执行完上述命令后，你的本地 main 分支将与远程 **完全一致**，一字不差！
 ### 2.3 合并冲突解决
 
 ```bash
