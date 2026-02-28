@@ -1,0 +1,304 @@
+/* 打印设置 */
+@page {
+  margin: 10mm;
+  size: A4;
+}
+
+/* 全局样式 */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "微软雅黑", "Segoe UI", "PingFang SC", "Hiragino Sans GB", Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  color: #2c3e50;
+  background: #ffffff;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+/* 头部区域 */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 3px solid #3498db;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.info {
+  flex: 1;
+}
+
+.info h1 {
+  margin: 0 0 10px 0;
+  font-size: 32px;
+  color: #2c3e50;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.info p {
+  margin: 8px 0;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #34495e;
+}
+
+.avatar {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  margin-left: 30px;
+  border: 4px solid #3498db;
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+  object-fit: cover;
+}
+
+/* 章节标题 */
+.section-title {
+  font-weight: 700;
+  font-size: 20px;
+  color: #2c3e50;
+  border-left: 5px solid #3498db;
+  background: linear-gradient(90deg, #e8f4f8 0%, #ffffff 100%);
+  padding: 10px 15px;
+  margin: 28px 0 15px 0;
+  border-radius: 0 4px 4px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.section-title::before {
+  content: '';
+  position: absolute;
+  left: -5px;
+  top: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(180deg, #3498db 0%, #2980b9 100%);
+  border-radius: 4px 0 0 4px;
+}
+
+/* 列表样式 */
+ul {
+  margin: 10px 0 10px 20px;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  margin-bottom: 8px;
+  font-size: 14px;
+  line-height: 1.8;
+  padding-left: 20px;
+  position: relative;
+  color: #34495e;
+}
+
+li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: #3498db;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* 教育经历 */
+.school {
+  margin-bottom: 18px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 6px;
+  border-left: 4px solid #3498db;
+}
+
+.school strong {
+  font-weight: 700;
+  font-size: 16px;
+  color: #2c3e50;
+}
+
+/* 项目经验 */
+.project {
+  margin-bottom: 20px;
+  padding: 18px;
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #e1e8ed;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+}
+
+.project:hover {
+  box-shadow: 0 4px 16px rgba(52, 152, 219, 0.15);
+  border-color: #3498db;
+}
+
+.project > div {
+  margin-bottom: 10px;
+  line-height: 1.8;
+}
+
+.project b {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+/* 链接样式 */
+a {
+  color: #3498db;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid transparent;
+}
+
+a:hover {
+  color: #2980b9;
+  border-bottom: 1px solid #3498db;
+}
+
+/* 加粗文本 */
+strong, b {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+/* 高亮样式 */
+.highlight {
+  background: linear-gradient(120deg, #ffeaa7 0%, #fdcb6e 100%);
+  color: #2c3e50;
+  border-radius: 3px;
+  padding: 2px 6px;
+  font-weight: 500;
+  box-shadow: 0 1px 3px rgba(253, 203, 110, 0.3);
+}
+
+/* 技能标签 */
+.skill-tag {
+  display: inline-block;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-size: 13px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  font-weight: 500;
+  box-shadow: 0 2px 6px rgba(102, 126, 234, 0.3);
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.skill-tag:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+/* 关键词高亮 - 保留原有功能 */
+.strong-highlight {
+  background: linear-gradient(120deg, #ffeaa7 0%, #fdcb6e 100%);
+  color: #2c3e50;
+  font-weight: 600;
+  border-radius: 3px;
+  padding: 2px 6px;
+  box-shadow: 0 1px 3px rgba(253, 203, 110, 0.3);
+  transition: all 0.2s ease;
+}
+
+.strong-highlight:hover {
+  background: linear-gradient(120deg, #fdcb6e 0%, #ffeaa7 100%);
+  box-shadow: 0 2px 6px rgba(253, 203, 110, 0.5);
+}
+
+/* 联系方式图标 */
+.contact-icon {
+  color: #3498db;
+  font-size: 16px;
+  margin-right: 4px;
+}
+
+/* 求职意向 */
+.job-intent {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+/* 期望薪资 */
+.salary {
+  color: #e74c3c;
+  font-weight: 600;
+}
+
+/* 分割线 */
+hr {
+  border: none;
+  border-top: 2px solid #ecf0f1;
+  margin: 20px 0;
+}
+
+/* 打印优化 */
+@media print {
+  body {
+    padding: 0;
+    background: #ffffff;
+  }
+  
+  .header {
+    box-shadow: none;
+    border-bottom: 2px solid #3498db;
+  }
+  
+  .project {
+    page-break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #e1e8ed;
+  }
+  
+  .section-title {
+    page-break-after: avoid;
+    box-shadow: none;
+  }
+  
+  a {
+    color: #3498db;
+    text-decoration: none;
+  }
+  
+  .skill-tag {
+    box-shadow: none;
+  }
+  
+  .strong-highlight {
+    box-shadow: none;
+  }
+}
+
+/* 响应式设计 */
+@media screen and (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+  
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .avatar {
+    margin: 20px 0 0 0;
+  }
+  
+  .info h1 {
+    font-size: 26px;
+  }
+} 

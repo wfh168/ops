@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>吴付红-运维实习生简历</title>
+    <style>
+        @page {
+            margin: 8mm;
+            size: A4;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "微软雅黑", Arial, sans-serif;
+            color: #2c3e50;
+            background: #fff;
+            line-height: 1.5;
+            font-size: 13px;
+            padding: 15px;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-bottom: 3px solid #3498db;
+            background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
+            border-radius: 6px;
+        }
+
+        .info h1 {
+            font-size: 28px;
+            color: #2c3e50;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .info p {
+            margin: 4px 0;
+            font-size: 13px;
+            color: #34495e;
+        }
+
+        .avatar {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            border: 3px solid #3498db;
+            object-fit: cover;
+            margin-left: 20px;
+        }
+
+        .section-title {
+            font-size: 17px;
+            font-weight: 700;
+            color: #2c3e50;
+            border-left: 4px solid #3498db;
+            background: linear-gradient(90deg, #e8f4f8 0%, #fff 100%);
+            padding: 8px 12px;
+            margin: 18px 0 10px 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        ul {
+            margin: 8px 0 8px 18px;
+            padding: 0;
+            list-style: none;
+        }
+
+        li {
+            margin-bottom: 6px;
+            font-size: 13px;
+            line-height: 1.6;
+            padding-left: 16px;
+            position: relative;
+            color: #34495e;
+        }
+
+        li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #3498db;
+            font-weight: bold;
+        }
+
+        .school, .project {
+            margin-bottom: 12px;
+            padding: 12px;
+            background: #f8f9fa;
+            border-radius: 6px;
+            border-left: 3px solid #3498db;
+        }
+
+        .project {
+            background: #fff;
+            border: 1px solid #e1e8ed;
+        }
+
+        .project > div {
+            margin-bottom: 6px;
+            line-height: 1.6;
+        }
+
+        .project b, .school strong {
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        .skill-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            border-radius: 15px;
+            padding: 3px 10px;
+            font-size: 12px;
+            margin-right: 6px;
+            margin-bottom: 6px;
+            font-weight: 500;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #ffeaa7 0%, #fdcb6e 100%);
+            color: #2c3e50;
+            font-weight: 600;
+            border-radius: 3px;
+            padding: 1px 4px;
+        }
+
+        @media print {
+            body {
+                padding: 0;
+            }
+            
+            .header {
+                background: #f8f9fa;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            
+            .section-title {
+                background: #e8f4f8;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            
+            .skill-tag {
+                background: #667eea;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            
+            .highlight {
+                background: #ffeaa7;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .school, .project {
+                page-break-inside: avoid;
+                background: #f8f9fa;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .project {
+                background: #fff;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <div class="info">
+        <h1>吴付红</h1>
+        <p><strong>👤 男 | 🎂 22岁 | 📞 18692652438 | ✉️ wu2740461899@163.com</strong></p>
+        <p><strong>💼 求职意向：运维实习生 | 💰 期望薪资：面议</strong></p>
+    </div>
+    <img src="简历附件.assets/wps1.jpg" alt="头像" class="avatar">
+</div>
+
+<div class="section-title">教育经历</div>
+<div class="school">
+    <strong>中南林业科技大学涉外学院</strong> 本科（统招） | 软件工程专业 | 2021.09 - 2025.06
+    <ul>
+        <li>校级二等奖学金获得者</li>
+        <li>担任院学生会宣传部部长，负责公众号运营与活动策划，具备良好的沟通协调能力</li>
+    </ul>
+</div>
+
+<div class="section-title">项目经验</div>
+<div class="project">
+    <div><b>项目名称：ContentHub 内容社区平台</b></div>
+    <div><b>项目周期：</b>2024.09 - 2025.01 | <b>角色：</b>后端开发 + 运维部署</div>
+    <div><b>技术栈：</b>
+        <span class="skill-tag">Spring Cloud</span>
+        <span class="skill-tag">Docker</span>
+        <span class="skill-tag">Jenkins</span>
+        <span class="skill-tag">MySQL</span>
+        <span class="skill-tag">Redis</span>
+        <span class="skill-tag">Nginx</span>
+        <span class="skill-tag">Nacos</span>
+        <span class="skill-tag">RabbitMQ</span>
+    </div>
+    <div><b>项目描述：</b>基于 Spring Cloud 微服务架构的内容社区平台，包含 8 个微服务模块，支持文章发布、评论互动、实时通知、全文搜索等功能</div>
+    <div><b>运维职责：</b></div>
+    <ul>
+        <li>负责项目 <span class="highlight">Docker 容器化部署</span>，编写 Dockerfile 和 docker-compose.yml，实现一键部署</li>
+        <li>搭建 <span class="highlight">Jenkins CI/CD 流水线</span>，实现代码提交自动构建、测试、部署，部署效率提升 80%</li>
+        <li>配置 <span class="highlight">Nginx 反向代理</span>和负载均衡，实现前后端分离部署和高可用架构</li>
+        <li>部署 <span class="highlight">MySQL、Redis、RabbitMQ、Elasticsearch、MinIO</span> 等中间件，保障服务稳定运行</li>
+        <li>编写 <span class="highlight">Shell 脚本</span>实现服务启停、日志清理、数据备份等自动化运维任务</li>
+        <li>配置 <span class="highlight">Nacos 服务注册中心</span>和 <span class="highlight">Sentinel 流量控制</span>，实现微服务治理</li>
+    </ul>
+    <div><b>项目成果：</b></div>
+    <ul>
+        <li>成功部署 8 个微服务 + 前端应用，系统稳定运行 3 个月无故障</li>
+        <li>通过 CI/CD 自动化，代码发布时间从 1 小时缩短至 <span class="highlight">10 分钟</span></li>
+        <li>编写 20+ 篇技术文档，涵盖部署、配置、故障排查等内容</li>
+    </ul>
+</div>
+
+<div class="section-title">专业技能</div>
+<ul>
+    <li><b>Linux 基础：</b>熟悉 <span class="highlight">CentOS/Ubuntu</span> 系统，掌握文件管理、用户权限、进程管理、磁盘管理等基础操作</li>
+    <li><b>Shell 脚本：</b>熟练编写 <span class="highlight">Shell</span> 脚本，掌握 <span class="highlight">grep、sed、awk</span> 三剑客文本处理</li>
+    <li><b>系统服务：</b>熟悉 <span class="highlight">systemd</span> 服务管理、<span class="highlight">crontab</span> 定时任务、<span class="highlight">SSH</span> 远程管理</li>
+    <li><b>Web 服务：</b>熟练配置 <span class="highlight">Nginx</span> 反向代理、负载均衡、虚拟主机、HTTPS 证书</li>
+    <li><b>容器技术：</b>熟练使用 <span class="highlight">Docker</span> 容器化部署，掌握 <span class="highlight">Docker Compose</span> 多容器编排</li>
+    <li><b>数据库：</b>熟悉 <span class="highlight">MySQL</span> 安装配置、用户管理、备份恢复、基础 SQL 操作</li>
+    <li><b>中间件部署：</b>掌握 <span class="highlight">Redis、RabbitMQ、Nacos、Elasticsearch、MinIO</span> 的安装与基础配置</li>
+    <li><b>CI/CD：</b>熟悉 <span class="highlight">Jenkins</span> 自动化构建部署，掌握 <span class="highlight">Git</span> 版本控制基础</li>
+    <li><b>网络基础：</b>了解 <span class="highlight">TCP/IP</span> 协议、<span class="highlight">iptables</span> 防火墙、网络排查工具（ping、telnet、netstat）</li>
+    <li><b>监控工具：</b>了解 <span class="highlight">Prometheus、Grafana</span> 监控体系，掌握日志分析与故障排查</li>
+</ul>
+
+<div class="section-title">自我评价</div>
+<ul>
+    <li>具备扎实的 Linux 基础，熟练掌握常用命令和 Shell 脚本编程</li>
+    <li>独立完成微服务项目的容器化部署和 CI/CD 流水线搭建，具备实际项目经验</li>
+    <li>善于通过日志分析和文档查阅解决技术问题，学习能力强</li>
+    <li>工作认真负责，能够按时完成任务，具备良好的团队协作能力</li>
+</ul>
+</body>
+</html>
