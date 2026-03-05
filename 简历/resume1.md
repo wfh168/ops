@@ -2,7 +2,7 @@
     <div>
       <h1 style="margin: 0;">吴付红</h1>
       <p style="margin: 0; margin-bottom: 10px;">
-        <strong>👤 男 | 🎂 年龄：22岁 | 📞 18692652438 | ✉️ wu2740461899@163.com</strong>
+        <strong>👤 男 | 🎂 年龄：23岁 | 📞 18692652438 | ✉️ wu2740461899@163.com</strong>
       </p>
       <p style="margin: 0; margin-bottom: 10px;">
         <strong>💼 求职意向：Java后端开发工程师 | 💰 期望薪资：面议 </strong>
@@ -17,7 +17,7 @@
 
 <div>
   <div style="font-weight: bold; font-size: 16px; margin-bottom: 4px;">
-    中南林业科技大学涉外学院
+    中南林业科技大学
   </div>
   <div style="color: #000; margin-bottom: 10px;">
     本科（统招） | 软件工程专业

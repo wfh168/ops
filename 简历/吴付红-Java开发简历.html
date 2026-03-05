@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>吴付红-Java后端开发工程师简历</title>
+    <style>
+        @page {
+            margin: 15mm 12mm;
+            size: A4;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "微软雅黑", "Microsoft YaHei", Arial, sans-serif;
+            color: #2c3e50;
+            background: #fff;
+            line-height: 1.6;
+            font-size: 13px;
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            border-bottom: 3px solid #2c3e50;
+            background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
+            border-radius: 6px;
+        }
+
+        .info h1 {
+            font-size: 28px;
+            color: #2c3e50;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .info p {
+            margin: 4px 0;
+            font-size: 13px;
+            color: #34495e;
+            line-height: 1.5;
+        }
+
+        .avatar {
+            width: 90px;
+            height: 90px;
+            border-radius: 6px;
+            border: 2px solid #2c3e50;
+            object-fit: cover;
+            margin-left: 20px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #2c3e50;
+            border-left: 4px solid #2c3e50;
+            background: #f2f2f2;
+            padding: 8px 12px;
+            margin: 18px 0 12px 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .school {
+            margin-bottom: 12px;
+            padding: 12px;
+            background: #f8f9fa;
+            border-radius: 6px;
+            border-left: 3px solid #2c3e50;
+        }
+
+        .school-name {
+            font-weight: bold;
+            font-size: 15px;
+            margin-bottom: 4px;
+            color: #2c3e50;
+        }
+
+        .school-info {
+            color: #34495e;
+            margin-bottom: 8px;
+            font-size: 13px;
+        }
+
+        .project {
+            margin-bottom: 15px;
+            padding: 12px;
+            background: #fff;
+            border-radius: 6px;
+            border: 1px solid #e1e8ed;
+            page-break-inside: avoid;
+        }
+
+        .project-title {
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 6px;
+            color: #2c3e50;
+        }
+
+        .project-info {
+            margin-bottom: 5px;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .project-info strong {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .tech-tags {
+            margin: 8px 0;
+        }
+
+        .tech-tag {
+            display: inline-block;
+            background: #f2f2f2;
+            color: #2c3e50;
+            border-radius: 3px;
+            padding: 3px 10px;
+            font-size: 12px;
+            margin-right: 6px;
+            margin-bottom: 5px;
+            border: 1px solid #ddd;
+            font-weight: 500;
+        }
+
+        .highlight {
+            background: #ffe58f;
+            padding: 1px 3px;
+            border-radius: 2px;
+            font-weight: 600;
+        }
+
+        ul {
+            margin: 8px 0 8px 20px;
+            padding: 0;
+            list-style-type: disc;
+        }
+
+        li {
+            margin-bottom: 5px;
+            font-size: 13px;
+            line-height: 1.7;
+            color: #34495e;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @media print {
+            body {
+                padding: 0;
+                font-size: 12px;
+            }
+            
+            .header {
+                background: #f8f9fa;
+                padding: 12px 15px;
+                margin-bottom: 12px;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .info h1 {
+                font-size: 24px;
+                margin-bottom: 6px;
+            }
+
+            .info p {
+                font-size: 12px;
+                margin: 3px 0;
+            }
+
+            .avatar {
+                width: 80px;
+                height: 80px;
+            }
+            
+            .section-title {
+                background: #f2f2f2;
+                font-size: 16px;
+                padding: 6px 10px;
+                margin: 12px 0 8px 0;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .school {
+                padding: 10px;
+                margin-bottom: 10px;
+                background: #f8f9fa;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .school-name {
+                font-size: 14px;
+            }
+
+            .school-info {
+                font-size: 12px;
+            }
+
+            .project {
+                padding: 10px;
+                margin-bottom: 12px;
+                page-break-inside: avoid;
+                border: 1px solid #ddd;
+            }
+
+            .project-title {
+                font-size: 15px;
+                margin-bottom: 5px;
+            }
+
+            .project-info {
+                font-size: 12px;
+                margin-bottom: 4px;
+                line-height: 1.5;
+            }
+
+            .tech-tag {
+                font-size: 11px;
+                padding: 2px 8px;
+                margin-right: 5px;
+                margin-bottom: 4px;
+                background: #f2f2f2;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            
+            .highlight {
+                background: #ffe58f;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            ul {
+                margin: 6px 0 6px 18px;
+            }
+
+            li {
+                font-size: 12px;
+                margin-bottom: 4px;
+                line-height: 1.6;
+            }
+
+            a {
+                color: #2c3e50;
+                text-decoration: none;
+            }
+
+            /* 确保第二页不会从项目中间断开 */
+            .project, .school {
+                page-break-inside: avoid;
+            }
+
+            /* 避免标题单独在页面底部 */
+            .section-title {
+                page-break-after: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <div class="info">
+        <h1>吴付红</h1>
+        <p><strong>👤 男 | 🎂 23岁 | 📞 18692652438 | ✉️ wu2740461899@163.com</strong></p>
+        <p><strong>💼 求职意向：Java后端开发工程师 | 💰 期望薪资：面议</strong></p>
+    </div>
+    <img src="简历附件.assets/wps1.jpg" alt="头像" class="avatar">
+</div>
+
+<div class="section-title">教育经历</div>
+<div class="school">
+    <div class="school-name">中南林业科技大学</div>
+    <div class="school-info">本科（统招） | 软件工程专业 | 2021.09 - 2025.06</div>
+    <ul>
+        <li>校级二等奖学金获得者</li>
+        <li>担任院学生会宣传部部长，负责公众号运营与校园活动策划组织，具备良好的沟通协调能力与团队协作意识</li>
+    </ul>
+</div>
+
+<div class="section-title">项目经验</div>
+
+<div class="project">
+    <div class="project-title">项目名称：ContentHub 内容社区平台</div>
+    <div class="project-info"><strong>在线地址：</strong><a href="http://150.158.103.167">http://150.158.103.167</a> | <strong>代码仓库：</strong><a href="https://github.com/wfh168/Wfh-ContentHub">GitHub</a></div>
+    <div class="project-info"><strong>项目周期：</strong>2024.09 - 2025.01</div>
+    <div class="project-info"><strong>项目目标：</strong>基于 Spring Cloud 微服务架构开发内容社区平台，包含 8 个微服务模块，实现文章发布、评论互动、实时通知、全文搜索等核心功能</div>
+    <div class="project-info"><strong>核心技术：</strong></div>
+    <div class="tech-tags">
+        <span class="tech-tag">Spring Cloud </span>
+        <span class="tech-tag">Spring Boot </span>
+        <span class="tech-tag">MyBatis-Plus</span>
+        <span class="tech-tag">MySQL</span>
+        <span class="tech-tag">Redis</span>
+        <span class="tech-tag">RabbitMQ</span>
+        <span class="tech-tag">Elasticsearch</span>
+        <span class="tech-tag">Nacos</span>
+        <span class="tech-tag">Sentinel</span>
+        <span class="tech-tag">MinIO</span>
+        <span class="tech-tag">Sa-Token</span>
+    </div>
+    <div class="project-info"><strong>架构设计：</strong></div>
+    <ul>
+        <li>设计并实现 <span class="highlight">8 个微服务模块</span>：Gateway 网关、User 用户服务、Content 内容服务、Comment 评论服务、Notification 通知服务、Search 搜索服务、File 文件服务、Admin 管理服务</li>
+        <li>设计 <span class="highlight">API 网关（Spring Cloud Gateway）</span>统一路由转发、跨域处理、流量管控</li>
+        <li>使用 <span class="highlight">Sa-Token</span> 实现统一认证鉴权，支持 Token 刷新、权限控制</li>
+        <li>使用 <span class="highlight">Nacos</span> 实现服务注册发现和配置管理，<span class="highlight">Sentinel</span> 实现流量控制和熔断降级</li>
+    </ul>
+    <div class="project-info"><strong>核心功能实现：</strong></div>
+    <ul>
+        <li><strong>用户服务：</strong>注册登录、个人资料、关注粉丝系统、私信聊天、用户黑名单</li>
+        <li><strong>内容服务：</strong>Markdown 文章编辑、分类标签、点赞收藏、浏览统计、文章流推荐</li>
+        <li><strong>评论服务：</strong>多级评论回复、@用户提及、敏感词过滤、评论通知</li>
+        <li><strong>通知服务：</strong><span class="highlight">WebSocket 实时推送</span>、点赞/评论/关注通知、未读消息统计</li>
+        <li><strong>搜索服务：</strong><span class="highlight">Elasticsearch 全文搜索</span>、文章索引同步、分词高亮</li>
+        <li><strong>文件服务：</strong><span class="highlight">MinIO 对象存储</span>、图片/音频/视频上传、文件分类管理</li>
+        <li><strong>管理服务：</strong>数据仪表盘、用户/文章/评论管理、系统配置、操作日志</li>
+    </ul>
+    <div class="project-info"><strong>技术亮点：</strong></div>
+    <ul>
+        <li>使用 <span class="highlight">RabbitMQ 消息队列</span>实现评论数同步、文章索引同步、用户状态同步，保证数据最终一致性</li>
+        <li>通过 <span class="highlight">Redis 缓存</span>优化热点数据查询，使用 Druid 连接池提升数据库性能</li>
+        <li>集成 <span class="highlight">Elasticsearch 8.x</span> 实现文章全文搜索，支持分词、高亮、相关度排序</li>
+        <li>使用 <span class="highlight">WebSocket（STOMP + SockJS）</span>实现实时通知推送，提升用户体验</li>
+        <li>前后端分离架构，前端使用 <span class="highlight">Vue 3 + TypeScript + Element Plus</span>，支持 Markdown 编辑和音乐播放器</li>
+        <li>完整的 <span class="highlight">Docker 容器化部署</span>方案，编写 docker-compose.yml 实现一键部署</li>
+    </ul>
+</div>
+
+<div class="project">
+    <div class="project-title">项目名称：Wfh-RPC 分布式RPC框架</div>
+    <div class="project-info"><strong>项目地址：</strong><a href="https://github.com/wfh168/wfh-rpc">https://github.com/wfh168/wfh-rpc</a></div>
+    <div class="project-info"><strong>项目周期：</strong>2024.03 - 2024.08</div>
+    <div class="project-info"><strong>核心技术：</strong></div>
+    <div class="tech-tags">
+        <span class="tech-tag">Spring Boot</span>
+        <span class="tech-tag">Netty</span>
+        <span class="tech-tag">Zookeeper</span>
+        <span class="tech-tag">Redis</span>
+        <span class="tech-tag">SPI</span>
+    </div>
+    <div class="project-info"><strong>项目介绍：</strong>Wfh-RPC 是一款基于微内核架构搭建的 RPC 框架，提供高性能、高扩展性和丰富的服务治理等基础组件</div>
+    <div class="project-info"><strong>主要实现：</strong></div>
+    <ul>
+        <li>基于 <span class="highlight">Netty</span> 实现高性能网络通信，设计<span class="highlight">自定义协议</span>，封装请求和响应</li>
+        <li>实现<span class="highlight">限流器和熔断器</span>保护服务调用方和提供方，防止服务雪崩</li>
+        <li>支持<span class="highlight">多种序列化工具</span>（Hessian、Protobuf、JSON）和压缩工具，采用<span class="highlight">SPI + XML 配置</span>让工程扩展性更强</li>
+        <li>引入 Redis <span class="highlight">分布式心跳机制</span>，实现多实例/多进程环境下的服务健康状态共享与动态下线</li>
+        <li>实现多种<span class="highlight">负载均衡策略</span>：轮询、一致性哈希、最短响应时间、加权轮询</li>
+        <li>集成 <span class="highlight">Zookeeper</span> 实现服务注册与发现，支持服务动态上下线</li>
+    </ul>
+    <div class="project-info"><strong>下一步计划：</strong></div>
+    <ul>
+        <li>针对 Netty + Hessian 的配置方式，进行基准测试和性能分析</li>
+        <li>集成 Prometheus、Grafana 等，实现服务调用链路追踪、QPS/延迟/健康等实时监控</li>
+    </ul>
+</div>
+
+<div class="section-title">专业技能</div>
+<ul>
+    <li>具备扎实的 <span class="highlight">Java 基础</span>，熟练掌握集合、多线程、反射、SPI、ASM 等基础框架</li>
+    <li>熟悉 <span class="highlight">JVM</span> 虚拟机运行时数据区、类加载、垃圾回收算法、字节码指令</li>
+    <li>熟练掌握<span class="highlight">常用设计模式</span>：策略模式、工厂模式、模板模式、责任链模式、代理模式</li>
+    <li>熟练掌握 <span class="highlight">MySQL</span>，熟悉索引、事务、日志原理，能够进行 SQL 优化</li>
+    <li>熟练掌握 <span class="highlight">Redis</span>，熟悉常用数据结构、数据持久化、内存淘汰策略、一致性哈希</li>
+    <li>熟练掌握 <span class="highlight">MyBatis、Spring、Spring MVC、Spring Boot</span>，并手写过 Spring MVC 框架</li>
+    <li>熟练使用消息中间件 <span class="highlight">RabbitMQ、RocketMQ</span> 进行异步开发</li>
+    <li>熟练使用 <span class="highlight">Dubbo、Zookeeper</span> 分布式微服务治理框架</li>
+    <li>熟练使用 <span class="highlight">XXL-Job</span> 分布式定时任务调度框架</li>
+    <li>熟悉 <span class="highlight">Spring Cloud</span> 微服务架构，掌握 Nacos、Gateway、Sentinel 等组件</li>
+</ul>
+
+<div class="section-title">个人评价</div>
+<ul>
+    <li><span class="highlight">自学三年 Java</span>，所学知识来源于自身理解思考，具备扎实的技术基础</li>
+    <li>具备独立解决问题的能力，善于通过查阅文档、源码分析解决技术难题</li>
+    <li>学习能力强，对新技术保持热情，通过学习不断强化自己的能力</li>
+    <li>工作认真负责，能承受一定的工作压力，具备良好的团队协作精神</li>
+</ul>
+
+</body>
+</html>
